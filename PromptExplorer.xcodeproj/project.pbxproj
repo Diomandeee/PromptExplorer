@@ -16,8 +16,8 @@
 		685776CAC41069D60E661119 /* PromptExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7735AA10485ED8BC3DE931 /* PromptExplorerTests.swift */; };
 		89EFEE778398BEA1AA640D87 /* OpenClawCore in Frameworks */ = {isa = PBXBuildFile; productRef = ED271DE0FC2C29F5747D1A08 /* OpenClawCore */; };
 		A653EF78612E10BBE94E772C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 180829A6EEDCDA3E4EC8D7F4 /* ComposableArchitecture */; };
-		A7E781A005675F28FD2D3587 /* OpenClawTCA in Frameworks */ = {isa = PBXBuildFile; productRef = C61B78333AF36A1D3A151F84 /* OpenClawTCA */; };
 		F2C9BDD448FDA4EA61C823CE /* PromptExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB08E6131E34B919DCFB0C2 /* PromptExplorerApp.swift */; };
+		F90E8C37DCC17917C6E55F16 /* HubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DD3C5C3CB9AE96EC961C7 /* HubClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,7 @@
 /* Begin PBXFileReference section */
 		234AED582E4B8F93E2F2E127 /* PromptExplorerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptExplorerView.swift; sourceTree = "<group>"; };
 		25FC75AE26FB28E580A39551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2C3DD3C5C3CB9AE96EC961C7 /* HubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubClient.swift; sourceTree = "<group>"; };
 		2D7735AA10485ED8BC3DE931 /* PromptExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptExplorerTests.swift; sourceTree = "<group>"; };
 		47E992850C7C47D3A23B97E7 /* PromptExplorer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PromptExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB08E6131E34B919DCFB0C2 /* PromptExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptExplorerApp.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 				3B5F78248AF74FF8F1A61C3F /* Supabase in Frameworks */,
 				89EFEE778398BEA1AA640D87 /* OpenClawCore in Frameworks */,
 				307A6FAE9891727E2F915A80 /* OpenClawSupabase in Frameworks */,
-				A7E781A005675F28FD2D3587 /* OpenClawTCA in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +72,7 @@
 			children = (
 				AFA2DE09FD07ECFBB74FB4BF /* Assets.xcassets */,
 				841D9073F13D064F27DE4916 /* ContentView.swift */,
+				2C3DD3C5C3CB9AE96EC961C7 /* HubClient.swift */,
 				25FC75AE26FB28E580A39551 /* Info.plist */,
 				A47730785F7C5B2123E6A27F /* PromptExplorer.entitlements */,
 				6AB08E6131E34B919DCFB0C2 /* PromptExplorerApp.swift */,
@@ -120,7 +121,6 @@
 				946491E010376CAA4EEAF2E5 /* Supabase */,
 				ED271DE0FC2C29F5747D1A08 /* OpenClawCore */,
 				8A8D6CA2902E0246ADAA989C /* OpenClawSupabase */,
-				C61B78333AF36A1D3A151F84 /* OpenClawTCA */,
 			);
 			productName = PromptExplorer;
 			productReference = 47E992850C7C47D3A23B97E7 /* PromptExplorer.app */;
@@ -201,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13C12EEA0FD0451B05D29440 /* ContentView.swift in Sources */,
+				F90E8C37DCC17917C6E55F16 /* HubClient.swift in Sources */,
 				F2C9BDD448FDA4EA61C823CE /* PromptExplorerApp.swift in Sources */,
 				33E6D73940CF3F9DA68AE28A /* PromptExplorerFeature.swift in Sources */,
 				1F21F1DC423D813FE66AE42C /* PromptExplorerView.swift in Sources */,
@@ -290,7 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8643C988C4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PromptExplorer/Info.plist;
@@ -392,7 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8643C988C4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PromptExplorer/Info.plist;
@@ -460,8 +461,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Diomandeee/OpenClawKit";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				kind = exactVersion;
+				version = 1.0.2;
 			};
 		};
 		49C91E5D95612C7F372D80BC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
@@ -497,11 +498,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A50C88EF031999D2A0F8AF19 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
-		};
-		C61B78333AF36A1D3A151F84 /* OpenClawTCA */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0688DC2F9E4AA4834DCDA54E /* XCRemoteSwiftPackageReference "OpenClawKit" */;
-			productName = OpenClawTCA;
 		};
 		ED271DE0FC2C29F5747D1A08 /* OpenClawCore */ = {
 			isa = XCSwiftPackageProductDependency;
